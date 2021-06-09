@@ -13,12 +13,12 @@ export async function loadBinaryData(url: string): Promise<Uint8Array> {
 				new LoadingError(`failed to load binary data, code "${xhr.status}" from "${url}"`)
 			)
 		}
-	
+
 		xhr.onerror = handleError
 
 		xhr.onreadystatechange = () => {
 			if (xhr.readyState == 4) {
-				if (xhr.status == 200) {
+				if (xhr.status == 200 || xhr.status === 0) {
 					resolve(new Uint8Array(xhr.response))
 				}
 				else {
