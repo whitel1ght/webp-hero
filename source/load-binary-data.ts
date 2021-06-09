@@ -5,7 +5,7 @@ export async function loadBinaryData(url: string): Promise<Uint8Array> {
 	return new Promise<Uint8Array>((resolve, reject) => {
 
 		const xhr = new XMLHttpRequest()
-		xhr.open("GET", url)
+		xhr.open("GET", url, true)
 		xhr.responseType = "arraybuffer"
 
 		const handleError = () => {
