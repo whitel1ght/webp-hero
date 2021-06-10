@@ -39,7 +39,6 @@
 		"url": "https://github.com/chase-moskal/webp-hero/issues"
 	},
 	"homepage": "https://github.com/chase-moskal/webp-hero#readme",
-	"dependencies": {},
 	"devDependencies": {
 		"array-from": "^2.1.1",
 		"barrelsby": "^2.2.0",
